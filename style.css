@@ -1,0 +1,10 @@
+.logo{
+    width: 8%;
+}
+.logo-home{
+    width: 10%;
+}
+.title-logo {
+    display: inline-flex;
+    margin-left: 1%; 
+}

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>DOC - Editar Foto do Usuário</title>
+    <link rel="stylesheet" type="text/css" href="../style.css" />
+	<meta charset="utf-8">
+</head>
+<body >
+
+	
+
+	<table border="0" width="900" align="center">		
+		<tr>
+			<td height="89">
+				<img src="../img/logo.png" class="logo">
+				<h3 class="title-logo">Documentação Projeto Fast Market API</h3>
+			</td>
+			<td align="right"> <a href="../index.html">Voltar</a>
+			
+		</tr>
+		<tr>
+			<td colspan="2">
+				<h2>Editar Foto do Usuário</h2>
+				<p>
+					<strong>Descrição: </strong> Inclusão da foto de perfil 
+                </p>
+                <p>
+                    <strong>Endpoint em Desenvolvimento: </strong> 
+                    <a href="https://fast-market-api-dev.herokuapp.com/user/avatar" target="_blank">
+                        https://fast-market-api-dev.herokuapp.com/user/avatar
+                    </a>
+                </p>
+                <p>
+                    <strong>Requisição para API: </strong>
+                    <ul>
+                        <li>Tipo da Requisição: POST</li>
+                        <li>* Obs: Autenticação necessária (precisa ter feito login pra acessar rota)</li>
+                        <li>Tipo do body: Multipart Form</li>
+                        <li>Conteúdo do body: </li>
+                    </ul> 
+                    
+                    <strong>campo: </strong> file  <strong>conteúdo: </strong> foto.jpg (a foto do usuário)
+                    <br/><br/>
+                    <strong>Print: </strong>
+                    <br/><br/>
+                    <img src="../img/body-add-avatar-user.jpeg" alt="body da requisição">
+                
+                </p>
+                <p>
+                    <strong>Observações: </strong>
+                    <ul>
+                        <li>Essa requisição a API deverá ser realizada após o usuário submeter a foto
+                             na aplicação ( ex: logo após ele selecionar a foto dentro da alteração 
+                             do perfil. essa alteração ocorrerá de forma independente sem afetar as demais 
+                             informações do usuário.)
+                        </li>
+                        <li> A mesma coisa deverá acontecer quando ele clicar e mudar de foto</li>
+                        
+                    </ul> 
+                </p>
+                <p>
+                    <strong>Response da API: </strong>
+                    <br/><br/>
+                    {<br/>
+                        &nbsp; &nbsp; &nbsp;"url": "https://fast-market-api-dev.herokuapp.com/files/0ce1dd2e2309f5100475071a4c84e113.jpg",<br/>
+                        &nbsp; &nbsp; &nbsp;"id": 1,<br/>
+                        &nbsp; &nbsp; &nbsp;"name": "foto.jpg",<br/>
+                        &nbsp; &nbsp; &nbsp;"path": "0ce1dd2e2309f5100475071a4c84e113.jpg",<br/>
+                        &nbsp; &nbsp; &nbsp;"updatedAt": "2020-04-17T04:43:59.160Z",<br/>
+                        &nbsp; &nbsp; &nbsp;"createdAt": "2020-04-17T04:43:59.160Z"<br/>
+                      }
+                </p>	                
+                <p>
+					<strong>Descrição: </strong> Remoção da foto de perfil 
+                </p>
+                <p>
+                    <strong>Endpoint em Desenvolvimento: </strong> 
+                    <a href="https://fast-market-api-dev.herokuapp.com/user/avatar" target="_blank">
+                        https://fast-market-api-dev.herokuapp.com/user/avatar
+                    </a>                
+                </p>
+                <p>
+                    <strong>Requisição para API: </strong>
+                    <ul>
+                        <li>Tipo da Requisição: DELETE</li>
+                        <li>* Obs: Autenticação necessária (precisa ter feito login pra acessar rota)</li>
+                    </ul>
+                </p>
+                <p>
+                    <strong>Response da API: </strong>
+                    <br/><br/>
+                    <strong>Se tudo ocorrer bem esse endpoint não terá response, retornará um 204 - No Content </strong>
+                    <br/><br/>
+
+                    {<br/><br/>
+                    }
+                </p>
+			</td>
+		</tr>		
+	</table>
+</body>
+</html>

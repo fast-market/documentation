@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>DOC - Editar Usuário</title>
+    <link rel="stylesheet" type="text/css" href="../style.css" />
+	<meta charset="utf-8">
+</head>
+<body >
+
+	
+
+	<table border="0" width="900" align="center">		
+		<tr>
+			<td height="89">
+				<img src="../img/logo.png" class="logo">
+				<h3 class="title-logo">Documentação Projeto Fast Market API</h3>
+			</td>
+			<td align="right"> <a href="../index.html">Voltar</a>
+			
+		</tr>
+		<tr>
+			<td colspan="2">
+				<h2>Editar Usuário</h2>
+				<p>
+					<strong>Descrição: </strong> Edição das informações do usuário 
+                </p>
+                <p>
+                    <strong>Endpoint em Desenvolvimento: </strong> 
+                    <a href="https://fast-market-api-dev.herokuapp.com/users" target="_blank">
+                        https://fast-market-api-dev.herokuapp.com/users</a>
+                </p>
+                <p>
+                    <strong>Requisição para API: </strong>
+                    <ul>
+                        <li>Tipo da Requisição: PUT</li>
+                        <li>Obs: Autenticação necessária (precisa ter feito login pra acessar rota)</li>
+                        <li>Tipo do body: JSON</li>
+                        <li>Conteúdo do body: </li>
+                    </ul> 
+
+                    <strong>Exemplo de edição completa do usuário </strong>
+                    <br/><br/>
+
+                    { <br/>
+                        &nbsp; &nbsp; &nbsp;"name": "Ricardo",<br/>
+                        &nbsp; &nbsp; &nbsp;"email": "ricardo@gmail.com",<br/>
+                        &nbsp; &nbsp; &nbsp;"phone": "81994633530",<br/>
+                        &nbsp; &nbsp; &nbsp;"oldPassword": "12345678",<br/>
+                        &nbsp; &nbsp; &nbsp;"password": "0123456789",<br/>
+                        &nbsp; &nbsp; &nbsp;"confirmParssword": "0123456789"<br/>
+                    }
+                </p>
+                <p>
+                    <strong>Regras e Validações: </strong>
+                    <ul>
+                        <li>É necessário enviar apenas os campos que será alterado.
+                             ( se for apenas o nome. só precisa enviar o nome... etc.)</li>
+                        <li>Para alteração da senha é necessário enviar os campos: oldPassword,
+                             password, confirmParssword. (os três são obrigatórios nesse cenário)</li>
+                        <li>Verificação de unicidade do email será realizada</li>
+                        <li>Verificação da senha atual será realizada (senha atual = oldPassword)</li>
+                        <li>Verificação de password e confirmParssword será realizada</li>
+                        <li>Em caso de alteração dos campos email, phone, password será 
+                            realizada as mesmas validaões que na criação do usuário</li>
+                    </ul> 
+                </p>
+                <p>
+                    <strong>Response da API: </strong>
+                    <br/><br/>
+                    {<br/>
+                        &nbsp; &nbsp; &nbsp; "id": 1,<br/>
+                        &nbsp; &nbsp; &nbsp;"name": "Rick",<br/>
+                        &nbsp; &nbsp; &nbsp; "email": "ricardo@gmail.com",<br/>
+                        &nbsp; &nbsp; &nbsp;"phone": "81994633530"<br/>
+                      }
+                </p>				
+			</td>
+		</tr>		
+	</table>
+</body>
+</html>

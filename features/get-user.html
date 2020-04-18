@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>DOC - Consultar Usuário</title>
+    <link rel="stylesheet" type="text/css" href="../style.css" />
+	<meta charset="utf-8">
+</head>
+<body >
+
+	
+
+	<table border="0" width="900" align="center">		
+		<tr>
+			<td height="89">
+				<img src="../img/logo.png" class="logo">
+				<h3 class="title-logo">Documentação Projeto Fast Market API</h3>
+			</td>
+			<td align="right"> <a href="../index.html">Voltar</a>
+			
+		</tr>
+		<tr>
+			<td colspan="2">
+				<h2>Consultar Usuário</h2>
+				<p>
+					<strong>Descrição: </strong> Consultar o perfil do usuário 
+                </p>
+                <p>
+                    <strong>Endpoint em Desenvolvimento: </strong> 
+                    <a href="https://fast-market-api-dev.herokuapp.com/profile" target="_blank">
+                        https://fast-market-api-dev.herokuapp.com/profile</a>
+                </p>
+                <p>
+                    <strong>Requisição para API: </strong>
+                    <ul>
+                        <li>Tipo da Requisição: GET</li>
+                        <li>Obs: Autenticação necessária (precisa ter feito login pra acessar rota)</li>
+                    </ul>                     
+                </p>                
+                <p>
+                    <strong>Response da API: </strong>
+                    <br/><br/>
+                    <strong>Se o usuário não tiver uma foto de perfil: </strong>
+                    <br/><br/>
+                
+                    {<br/>
+                        &nbsp; &nbsp; &nbsp; "id": 1,<br/>
+                        &nbsp; &nbsp; &nbsp; "name": "Ricardo",<br/>
+                        &nbsp; &nbsp; &nbsp; "email": "ricardo@gmail.com",<br/>
+                        &nbsp; &nbsp; &nbsp; "phone": "81994633530"<br/>
+                        &nbsp; &nbsp; &nbsp; "avatar": null<br/>
+                    }
+                    <br/><br/>
+                    <strong>Se o usuário tiver uma foto de perfil: </strong>
+                    <br/><br/>
+                    {<br/>
+                        &nbsp; &nbsp; &nbsp; "id": 1,<br/>
+                        &nbsp; &nbsp; &nbsp; "name": "Ricardo",<br/>
+                        &nbsp; &nbsp; &nbsp; "email": "ricardo@gmail.com",<br/>
+                        &nbsp; &nbsp; &nbsp; "phone": "81994633530"<br/>
+                        &nbsp; &nbsp; &nbsp; "avatar":  {<br/>
+                        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;"url": "https://fast-market-api-dev.herokuapp.com/files/0ce1dd2e2309f5100475071a4c84e113.jpg",<br/>
+                        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;"id": 1,<br/>
+                        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;"name": "foto.jpg",<br/>
+                        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;"path": "0ce1dd2e2309f5100475071a4c84e113.jpg"<br/>
+                        &nbsp; &nbsp; &nbsp; } <br/>
+                    }
+                </p>				
+			</td>
+		</tr>		
+	</table>
+</body>
+</html>

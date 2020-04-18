@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>DOC - Criar Sessão</title>
+    <link rel="stylesheet" type="text/css" href="../style.css" />
+	<meta charset="utf-8">
+</head>
+<body >
+
+	
+
+	<table border="0" width="900" align="center">		
+		<tr>
+			<td height="89">
+				<img src="../img/logo.png" class="logo">
+				<h3 class="title-logo">Documentação Projeto Fast Market API</h3>
+			</td>
+			<td align="right"> <a href="../index.html">Voltar</a>
+			
+		</tr>		
+		<tr>
+			<td colspan="2">
+				<h2>Criar Sessão / Login</h2>
+				<p>
+					<strong>Descrição: </strong> Realizar o login na aplicação
+                </p>
+                <p>
+                    <strong>Endpoint em Desenvolvimento: </strong> 
+                    <a href="https://fast-market-api-dev.herokuapp.com/session" target="_blank">
+                        https://fast-market-api-dev.herokuapp.com/session</a>
+                </p>
+                <p>
+                    <strong>Requisição para API: </strong>
+                    <ul>
+                        <li>Tipo da Requisição: POST</li>
+                        <li>Tipo do body: JSON</li>
+                        <li>Conteúdo do body: </li>
+                    </ul> 
+
+                    { <br/>                        
+                        &nbsp; &nbsp; &nbsp;"email": "ricardo@gmail.com",<br/>                        
+                        &nbsp; &nbsp; &nbsp;"password": "12345678",<br/>                        
+                    }
+                </p>
+                <p>
+                    <strong>Regras e Validações: </strong>
+                    <ul>
+                        <li>Todos os campos são obrigatórios</li>
+                    </ul> 
+                </p>
+                <p>
+                    <strong>Response da API: </strong>
+                    <br/><br/>
+                    {<br/>
+                        &nbsp; &nbsp; &nbsp;"user": {<br/>
+                            &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; "id": 1,<br/>
+                            &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;"name": "Ricardo",<br/>
+                            &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;"email": "ricardo@gmail.com"<br/>
+                            &nbsp; &nbsp; &nbsp;},<br/>
+                            &nbsp; &nbsp; &nbsp; "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwibmFtZSItZT94Gtp4VqndVidaA_0rk9s0OP-YBOY"<br/>
+                      }
+                </p>	
+                <p>
+                    <strong>Observações: </strong>
+                    <ul>
+                        <li>O token recebido deverá ser enviado no headers das próximas requisições a api,
+                            apenas a criação de um usuário e o login são liberados sem o envio do token.</li>
+                        <li>Tipo de Autorização: <strong>Bearer Token</strong></li>
+                    </ul>
+                </p>			
+			</td>
+		</tr>		
+	</table>
+</body>
+</html>
